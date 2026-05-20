@@ -29,7 +29,7 @@ In this notebook, we use the supervised approach: the model learns directly from
 
 ## Pipeline overview
 
-```{mermaid}
+```mermaid
 flowchart LR
     A["Labelled data<br/>text + NAF code"] --> B["Split<br/>train / val / test"]
     B --> C["WordPiece Tokenizer<br/>text → token IDs"]
