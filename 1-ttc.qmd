@@ -189,9 +189,9 @@ final evaluation is truly unbiased.
 :::
 
 ::: {.callout-tip collapse="false" icon=false}
-## `<i class="bi bi-book"></i>`{=html} Exercice 2: Split the dataset into train / validation / test sets
+## `<i class="bi bi-book"></i>`{=html} Exercice 2: Prepare the data
 
-## Question 1 — Split the dataset
+## Question 1 — Split the dataset into train / validation / test sets
 
 Use `train_test_split` from `sklearn.model_selection` to split the dataset into train, validation, and test sets (70% / 15% / 15%). Do not forget to choose a `random_state`.
 
