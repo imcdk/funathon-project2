@@ -560,7 +560,12 @@ treated as an exploratory tool rather than a definitive causal explanation.
 ## Question 1 — Generate top-5 predictions with confidence scores
 
 Sample some text from the `X_text` array in a variable called `example_texts`.
-Call `ttc.predict(np.array(example_texts), top_k=5, explain_with_captum=True)`. The result is a dict with keys `prediction`, `confidence` and `captum_attributions` among others.
+Call `ttc.predict(np.array(example_texts), top_k=5, explain_with_captum=True)`. Print the main fields of the prediction. 
+
+<details>
+<summary>Clue here</summary>
+The result is a dict with keys `prediction`, `confidence` and `captum_attributions` among others.
+</details>
 
 ```{python}
 #| label: predict-examples
@@ -586,7 +591,10 @@ for i, text in enumerate(example_texts):
 
 ## Question 2 — Visualise word attributions for the top prediction
 
-Extract `captum_attributions` from the results, then use `map_attributions_to_word()`, `map_attributions_to_char()`, `plot_attributions_at_word()`, and `plot_attributions_at_char()` from `torchTextClassifiers.utilities.plot_explainability`.
+Now, we want to retrieve the most important words driving the NACE prediction. During inference, the model computes an attribution score for each token — stored in the `captum_attributions` field of the results — indicating how much each token contributed to the final decision. To do so:
+  - extract `captum_attributions` from results;
+  - use `map_attributions_to_word()` and `map_attributions_to_char()` to aggregate token-level attribution scores up to the word and character levels;
+  - visualize the resulting attributions with `plot_attributions_at_word()` and `plot_attributions_at_char()` from `torchTextClassifiers.utilities.plot_explainability`.
 
 ::: {.callout-note appearance="simple" collapse="true"}
 ## Understanding the result fields
