@@ -723,7 +723,8 @@ Not bad at all! The model reaches strong accuracy on the held-out test set — a
 In this notebook we learnt how to:
 
 - **Load and explore** a labelled dataset of business activity descriptions mapped to NACE codes.
-- **Split** the data into train, validation, and test sets, and encode the string labels to integers with `LabelEncoder`.
+- **Preprocess** the data: split into train, validation, and test sets, and encode the string labels to integers with `LabelEncoder`.
+- **Use the `torchTextClassifiers` package** to handle the full workflow: encoding textual labels, training a tokenizer, building a classifier, and explaining its predictions.
 - **Train a WordPiece tokenizer** from scratch on the training corpus, adapting the subword vocabulary to French domain-specific text.
 - **Configure and train** a neural text classifier end-to-end using `torchTextClassifiers`, with [MLflow](https://mlflow.org/docs/latest/index.html) tracking metrics in real time.
 - **Load a pretrained model** from [MLflow](https://mlflow.org/docs/latest/index.html) artefact storage, so the full-dataset model is available without waiting hours for training.
