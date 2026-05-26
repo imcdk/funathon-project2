@@ -154,8 +154,4 @@ df["code"].value_counts().head(10).plot(kind="bar")
 
 A small "Run Cell" lens appears above each `# %%` marker. Click it to execute that block. You can also use the shortcut <kbd>Shift</kbd> + <kbd>Enter</kbd>. This is convenient for iterating on small pieces of code or testing specific functions from the project.
 
-::: {.callout-tip}
-Files created at the root of the repository for your own exploration (such as `scratch.py` or `notes.md`) can be safely ignored from git by adding them to your local `.gitignore`, or to `.git/info/exclude` if you don't want to commit the ignore rule.
-:::
-
 You're now ready to start. Head to [Part 1](1-ttc.qmd) or [Part 2](2-rag-intro.qmd).
